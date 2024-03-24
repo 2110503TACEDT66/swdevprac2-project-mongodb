@@ -16,10 +16,9 @@ export default function BookingList(){
                 <div className="bg-slate-200 rounded-lg px-5 mx-5 py-5 my-5 text-slate-500" key={bookingItem.id}>
                     <div className="text-md">Name: {bookingItem.name}</div>
                     <div className="text-md">Surname: {bookingItem.surname}</div>
-                    <div className="text-md">ID Number: {bookingItem.id}</div>
-                    <div className="text-md">Hospital: {bookingItem.hospital} </div>
-                    <div className="text-md">Book date: {bookingItem.bookDate}</div>
-                    <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 transition px-3 py-1 m-2 p-2 text-white shadow-sm" onClick={()=>dispatch(removeBooking(bookingItem.id))}>Cancel Booking</button>
+                    <div className="text-md">Restaurant: {bookingItem.hospital} </div>
+                    <div className="text-md">Reservation date: {bookingItem.bookDate}</div>
+                    <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 transition px-3 py-1 m-2 p-2 text-white shadow-sm" onClick={()=>dispatch(removeBooking(bookingItem.id))}>Cancel Reservation</button>
                 </div>
             ))
         }
