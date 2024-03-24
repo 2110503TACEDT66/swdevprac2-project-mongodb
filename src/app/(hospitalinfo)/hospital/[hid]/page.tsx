@@ -11,7 +11,7 @@ export default async function HospitalDetail({params} : {params:{hid:string}}){
     
     return(
         <main className="text-center p-5">
-            <title>Hospital Info</title>
+            <title>Restaurant Info</title>
             <div className="text-3xl font-medium font-serif py-2 text-orange-200">{hospitalDetail.data.name}</div>
             <div className="flex flex-row my-5 block ml-50 mr-auto">
                 <Image src={hospitalDetail.data.picture} alt='Card' width={0} height={0} sizes="100vw" className="rounded-lg w-[30%]"/>
@@ -21,6 +21,7 @@ export default async function HospitalDetail({params} : {params:{hid:string}}){
                 <div className="text-md">Province: {hospitalDetail.data.province}</div>
                 <div className="text-md">Postal Code: {hospitalDetail.data.postalcode}</div>
                 <div className="text-md">Tel: {hospitalDetail.data.tel}</div>
+                <div className="text-md">Open Close Time: {hospitalDetail.data.openclosetime}</div>
                 </div>
             </div>
             
