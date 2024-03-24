@@ -13,12 +13,12 @@ export default function BookingList(){
         <div>
         {
             bookingItems.map((bookingItem)=>(
-                <div className="bg-slate-200 rounded-lg px-5 mx-5 py-5 my-5 text-slate-500" key={bookingItem.id}>
+                <div className="bg-rose-100 rounded-lg px-5 mx-5 py-5 my-5 text-emerald-600" key={bookingItem.id}>
                     <div className="text-md">Name: {bookingItem.name}</div>
                     <div className="text-md">Surname: {bookingItem.surname}</div>
                     <div className="text-md">Restaurant: {bookingItem.hospital} </div>
                     <div className="text-md">Reservation date: {bookingItem.bookDate}</div>
-                    <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 transition px-3 py-1 m-2 p-2 text-white shadow-sm" onClick={()=>dispatch(removeBooking(bookingItem.id))}>Cancel Reservation</button>
+                    <button className="block rounded-md bg-red-600 hover:bg-rose-500 transition px-3 py-1 m-2 p-2 text-white shadow-sm" onClick={()=>dispatch(removeBooking(bookingItem.id))}>Cancel Reservation</button>
                 </div>
             ))
         }
