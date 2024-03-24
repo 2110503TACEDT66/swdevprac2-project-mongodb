@@ -15,7 +15,7 @@ import { BookingItem } from "../../../interface"
 import { useRouter } from "next/navigation";
 
 
-export default function Book (){
+export default function Reserve (){
     // const session = await getServerSession(authOptions)
     // if(!session || !session.user.token) return null
 
@@ -35,7 +35,7 @@ export default function Book (){
                 bookDate: dayjs(bookDate).format("YYYY/MM/DD")
             } 
             dispatch(addBooking(item))
-            router.push('mybooking')
+            router.push('reservations')
         }
     }
 

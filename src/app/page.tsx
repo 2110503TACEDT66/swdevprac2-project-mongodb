@@ -12,7 +12,7 @@ export default function Home() {
       <title>Epic Hospital</title>
       
       <Banner/>
-      <PromoteCard></PromoteCard>
+      
       
     </main>
   );

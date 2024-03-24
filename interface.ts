@@ -10,6 +10,10 @@
     __v: number,
     id: string
   }
+
+  export interface RestaurantItem {
+    
+  }
   
   export interface HospitalJson {
     success: boolean,
