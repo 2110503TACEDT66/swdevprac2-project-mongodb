@@ -15,8 +15,7 @@ export default async function TopMenu(){
            
 
             
-            <Link href="/reservations"><div className='flex items-center absolute left-40 h-full px-2 text-slate-600 font-sans font-semibold text-sm'>
-                    Reservations</div></Link>
+            <TopMenuItem title='Reservations' pageRef="/reservations"/>
             
             
             {

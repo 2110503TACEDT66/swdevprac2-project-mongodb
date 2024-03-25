@@ -1,4 +1,4 @@
-import getHospitals from "@/libs/getHospitals";
+import getHospitals from "@/libs/getRestaurants";
 import CardPanel from "@/components/CardPanel";
 import HospitalCatalog from "@/components/HospitalCatalog";
 import { Suspense } from "react";

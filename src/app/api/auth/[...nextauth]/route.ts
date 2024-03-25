@@ -18,10 +18,13 @@ export const authOptions:AuthOptions = {
           },
           async authorize(credentials, req) {
            if(!credentials) return null
+          //  const user = {id: "1", name: "J Smith" , email:"jsmith@gmail.com"}
            const user = await userLogIn(credentials.email, credentials.password)
       
             if (user) {
               // Any object returned will be saved in `user` property of the JWT
+              // console.log("hello")
+              // console.log("hello",user)
               return user
             } else {
               // If you return null then an error will be displayed advising the user to check their details.

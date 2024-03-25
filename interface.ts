@@ -33,10 +33,10 @@
     data: HospitalItem[]
   }
 
-  export interface BookingItem {
+  export interface ReservationItem {
     name: string;
     surname: string;
     id: string;
-    hospital: string;
-    bookDate: string;
+    restaurant: string;
+    reservationDate: string;
   }

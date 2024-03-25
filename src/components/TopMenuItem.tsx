@@ -3,7 +3,7 @@ import styles from './topmenu.module.css'
 
 export default function TopMenuItem({title, pageRef}:{title:string, pageRef:string}){
     return(
-        <Link href={pageRef} className={styles.itemcontainer}>
+        <Link href={pageRef} className='flex items-center absolute left-40 h-full px-2 text-slate-600 font-sans font-semibold text-sm'>
             {title}
         </Link>
     );

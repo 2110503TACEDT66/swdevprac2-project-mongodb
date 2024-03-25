@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className='h-[500px]'>
       
-      <title>Epic Hospital</title>
+      <title>Panda Food</title>
       
       <Banner/>
       
