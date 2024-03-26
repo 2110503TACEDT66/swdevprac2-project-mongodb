@@ -26,6 +26,7 @@ export default async function TopMenu(){
             <TopMenuItem title='User Info' pageRef="/user"/>
             <TopMenuItem title='Reservations' pageRef="/reservations"/>
             <TopMenuItem title='Back to Main Page' pageRef="/"/>
+            <TopMenuItem title='Manual' pageRef="/manual"/>
             
             </div>
             <Link href="/restaurant"><div className='flex items-center absolute right-20 h-[80%] top-1 px-3 text-slate-200 bg-rose-700 hover:bg-rose-300 hover:text-slate-700 transition rounded-lg font-sans font-semibold text-sm'>
