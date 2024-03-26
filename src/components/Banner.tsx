@@ -27,7 +27,7 @@ export default function Banner(){
         </div>
 
         {
-            session? <div className='z-20 absolute top-5 right-10 font-bold bg-orange-200 m-2 p-2 rounded-lg text-rose-800 text-xl'>Welcome, {session.user?.name}</div>
+            session? <div className='z-20 absolute top-5 left-10 font-bold bg-orange-100 m-2 p-2 rounded-lg text-rose-800 text-xl'>Welcome, {session.user?.name}</div>
                     : null
             }
         

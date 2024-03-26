@@ -15,7 +15,7 @@ export default function ReservationList(){
         <div>
         {
             reservationItems.map((reservationItem)=>(
-                <div className="bg-rose-100 rounded-lg px-5 mx-5 py-5 my-5 text-emerald-600" key={reservationItem.id}>
+                <div className="bg-rose-50 rounded-lg px-5 mx-5 py-5 my-5 text-emerald-600" key={reservationItem.id}>
                     <div className="text-md">Customer Name:  {session.user?.name}</div>
                     <div className="text-md">Restaurant Name: {reservationItem.name}</div>
                     <div className="text-md">Reservation date: {reservationItem.reservationDate}</div>
