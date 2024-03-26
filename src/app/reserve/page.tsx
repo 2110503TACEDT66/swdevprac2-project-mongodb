@@ -15,6 +15,7 @@ import { ReservationItem } from "../../../interface"
 import { useRouter, useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
+import doReserve from "@/libs/DoReserve";
 
 
 export default function Reserve (){
@@ -23,29 +24,28 @@ export default function Reserve (){
     const urlParams = useSearchParams()
     const hid = urlParams.get('id')
     const restaurantName = urlParams.get('name')
-
+    const {data:session} = useSession()
     const dispatch = useDispatch<AppDispatch>()
-    //const {data:session} = useSession()
+    
     //console.log(session?.user.name)
-
-    const Booking = () => {
-        if(restaurantName && hid && bookDate){
-            const item:ReservationItem = {
-                name: restaurantName,
-                id: hid,
-                reservationDate: dayjs(bookDate).format("YYYY/MM/DD")
-            } 
-            dispatch(addReservation(item))
-            alert("Success!")
-            router.push('reserve')
-        }
-    }
 
     const [bookDate, setBookDate] = useState<Dayjs|null>(null)
     const [returnDate, setReturnDate] = useState<Dayjs|null>(null)
     const [returnlocation, setReturnLocation] = useState<string|null>(null)
     const [name, setName] = useState<string>('')
     const [id, setId] = useState<string>('')
+    
+    const Booking = async () => {
+        if(!session || !session.user.token) return null
+        if(restaurantName && hid && bookDate){
+            const response = await doReserve(session.user.token,hid,dayjs(bookDate).format("YYYY/MM/DD"))
+            // dispatch(addReservation(item))
+            alert("Success!")
+            router.push('reserve')
+        }
+    }
+
+    
     
     
     
