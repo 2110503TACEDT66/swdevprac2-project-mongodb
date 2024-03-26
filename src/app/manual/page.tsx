@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function manual(){
     return(
-        <main className="w-[100%] flex flex-col items-center space-y-1 h-[850px]">
+        <main className="w-[100%] flex flex-col items-center space-y-1 h-[850px] text-slate-600">
         <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <h1 className="text-2xl font-semibold mb-8 items-center">Manual</h1>
             <Image src='/img/manual1.png' alt='manual1' width={960} height={501.5}/>
