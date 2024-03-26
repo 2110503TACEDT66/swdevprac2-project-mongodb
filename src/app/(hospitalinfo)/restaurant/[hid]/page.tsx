@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import getHospital from "@/libs/getRestaurant";
 import Link from "next/link";
