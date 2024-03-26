@@ -22,12 +22,14 @@ export default function Banner(){
             <h3 className='text-lg font-serif italic text-orange-100'>Your number 1 choice for restaurant reserving</h3>
             <br></br>
             <br></br>
-            {
-            session? <h1 className='text-4xl font-bold text-orange-100'>Welcome User : {session.user?.name}</h1>
-                    : null
-            }
+            
            
         </div>
+
+        {
+            session? <div className='z-20 absolute top-5 right-10 font-bold bg-orange-200 m-2 p-2 rounded-lg text-rose-800 text-xl'>Welcome, {session.user?.name}</div>
+                    : null
+            }
         
         {/* <button className='bg-white text-rose-600 border-cyan-600 font-semibold py-2 px-2 m-2 rounded z-30 absolute bottom-0 right-0 transition hover:bg-rose-600 hover:text-orange-100 hover:border-transparent right-10' onClick={(e)=>{e.stopPropagation(); router.push('/restaurant')}}>
             Select Restaurant

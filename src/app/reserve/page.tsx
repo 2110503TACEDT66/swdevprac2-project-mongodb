@@ -35,6 +35,7 @@ export default function Reserve (){
                 reservationDate: dayjs(bookDate).format("YYYY/MM/DD")
             } 
             dispatch(addReservation(item))
+            alert("Success!")
             router.push('reserve')
         }
     }
@@ -49,8 +50,8 @@ export default function Reserve (){
     return(
         <main className="w-[100%] flex flex-col items-center space-y-1 h-[850px]">
             <title>Reserve a restaurant</title>
-            <h1 className='text-4xl font-semi-bold text-emerald-600 m-20 bg-white-100 rounded-lg drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] '>Restaurant Reservation</h1>
-            <h2 className='text-2xl text-emerald-600 m-20 bg-white-100 rounded-lg drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>Your Restaurant : {restaurantName}</h2>
+            <h1 className='text-4xl font-semi-bold text-emerald-600 m-20 bg-white-100 rounded-lg drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] '>Make your reservation</h1>
+            <h2 className='z-20 text-center font-bold bg-rose-100 m-2 p-2 rounded-lg text-rose-800 text-xl'>Reserving for : {restaurantName}</h2>
 
             {/* <div className="py-4">
                 <Box component="form" sx={{'& > :not(style)': { m: 1, width: '500px' },}} className="bg-rose-100 rounded-lg" >
