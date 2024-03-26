@@ -1,12 +1,12 @@
   export interface HospitalItem {
     _id: string,
     name: string,
+    picture:string,
     address: string,
     district: string,
     province: string,
     postalcode: string,
     tel: string,
-    picture: string,
     __v: number,
     id: string
   }
@@ -14,12 +14,12 @@
   export interface RestaurantItem {
     _id: string,
     name: string,
+    picture: string,
     address: string,
     district: string,
     province: string,
     postalcode: string,
     tel: string,
-    picture: string,
     openclosetime: string,
     __v: number,
     id: string
@@ -35,8 +35,6 @@
 
   export interface ReservationItem {
     name: string;
-    surname: string;
     id: string;
-    restaurant: string;
     reservationDate: string;
   }

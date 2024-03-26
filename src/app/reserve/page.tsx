@@ -28,12 +28,10 @@ export default function Reserve (){
     //console.log(session?.user.name)
 
     const Booking = () => {
-        if(name && id && location && bookDate){
+        if(restaurantName && hid && bookDate){
             const item:ReservationItem = {
-                name: name.substring(0, name.indexOf(' ')),
-                surname: name.substring(name.indexOf(' ') + 1),
-                id: id,
-                restaurant: location,
+                name: restaurantName,
+                id: hid,
                 reservationDate: dayjs(bookDate).format("YYYY/MM/DD")
             } 
             dispatch(addReservation(item))
@@ -42,9 +40,8 @@ export default function Reserve (){
     }
 
     const [bookDate, setBookDate] = useState<Dayjs|null>(null)
-    const [location, setLocation] = useState<string>('Chulalongkorn Hospital')
     const [returnDate, setReturnDate] = useState<Dayjs|null>(null)
-    const [returnlocation, setReturnLocation] = useState<string>('Chulalongkorn Hospital')
+    const [returnlocation, setReturnLocation] = useState<string|null>(null)
     const [name, setName] = useState<string>('')
     const [id, setId] = useState<string>('')
     
@@ -55,21 +52,11 @@ export default function Reserve (){
             <h1 className='text-4xl font-semi-bold text-emerald-600 m-20 bg-white-100 rounded-lg drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] '>Restaurant Reservation</h1>
             <h2 className='text-2xl text-emerald-600 m-20 bg-white-100 rounded-lg drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>Your Restaurant : {restaurantName}</h2>
 
-            {/* <div className="bg-slate-500 m-5 p-5 rounded-lg">
-            <div className="text-2xl text-orange-200 text-center ">{profile.data.name}'s Information</div>
-            <table className="table-auto border-seperate border-spacing-2 text-orange-200 m-5 px-5"><tbody>
-                <tr><td className=" px-5">Name:</td><td>{profile.data.name}</td></tr>
-                <tr><td className=" px-5">Email:</td><td>{profile.data.email}</td></tr>
-                <tr><td className=" px-5">Tel:</td><td>{profile.data.tel}</td></tr>
-                <tr><td className="px-5">Member Since:</td><td> {createdAt.toString()}</td></tr>
-            </tbody></table>
-            </div> */}
-
-            <div className="py-4">
+            {/* <div className="py-4">
                 <Box component="form" sx={{'& > :not(style)': { m: 1, width: '500px' },}} className="bg-rose-100 rounded-lg" >
                     <TextField id="name-lastname" name="Name-Lastname" label="Name-Lastname" variant="standard" value={name} onChange={(e)=> {setName(e.target.value)}}/>
                 </Box>
-            </div>
+            </div> */}
 
             <div className="w-fit space-y-2 py-4">
                 <div className="text-md text-center text-gray-600 ">Pick a date</div>

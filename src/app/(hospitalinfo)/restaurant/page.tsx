@@ -1,3 +1,4 @@
+"use client"
 import getHospitals from "@/libs/getRestaurants";
 import CardPanel from "@/components/CardPanel";
 import HospitalCatalog from "@/components/HospitalCatalog";
