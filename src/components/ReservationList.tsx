@@ -5,12 +5,13 @@ import { removeReservation } from "@/redux/features/reserveSlice"
 import { useSession } from "next-auth/react"
 
 export default function ReservationList(){
-
+    
     const reservationItems = useAppSelector((state)=> state.reservationSlice.reserveItems)
     const item = useAppSelector((state)=>(state))
     const {data:session} = useSession()
     console.log(item)
     const dispatch = useDispatch<AppDispatch>()
+    if(!session || !session.user.token) return null
     return (
         <div>
         {
