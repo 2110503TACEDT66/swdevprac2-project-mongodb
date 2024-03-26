@@ -13,7 +13,7 @@ export default async function HospitalDetail({params} : {params:{hid:string}}){
     return(
         <main className="text-center p-5">
             <title>Restaurant Info</title>
-            <div className="text-3xl font-medium font-serif py-2 text-orange-200">{hospitalDetail.data.name}</div>
+            <div className="text-3xl font-medium font-serif py-2 text-orange-600">{hospitalDetail.data.name}</div>
             <div className="flex flex-row my-5 block ml-50 mr-auto">
                 <Image src={hospitalDetail.data.picture} alt='Card' width={0} height={0} sizes="100vw" className="rounded-lg w-[30%]"/>
                 <div className="text-md text-left mx-5">
