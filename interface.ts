@@ -35,6 +35,12 @@
 
   export interface ReservationItem {
     name: string;
-    id: string;
+    _id: string;
     reservationDate: string;
+  }
+  
+  export interface ReservationJson {
+    success: boolean,
+    count: number,
+    data: ReservationItem[]
   }
