@@ -33,4 +33,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-Vercel: https://a12-swdevprac2-hoshioka-aoi.vercel.app/
+Vercel: https://swdevprac2-project-mongodb.vercel.app/
