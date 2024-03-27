@@ -2,7 +2,7 @@ import { ReservationJson } from "../../interface"
 
 export default async function getReserve(token: string)  {
     const response = await fetch(`${process.env.BACKEND_URL}/api/v1/reservations`, {
-
+        next: {tags: ['getReservations']},
         method: "GET",
         headers: {
             "Content-Type": "application/json",

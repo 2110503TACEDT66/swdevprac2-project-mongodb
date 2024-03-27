@@ -14,7 +14,7 @@ export const reservationSlice = createSlice({
         addReservation: (state, action:PayloadAction<ReservationItem>)=>{
             
             console.log("ssss", state.reserveItems)
-            const index = state.reserveItems.findIndex(items => items.id==action.payload.id)
+            const index = state.reserveItems.findIndex(items => items._id==action.payload._id)
             if(index!=-1){
                 state.reserveItems.splice(index,1)
             }
@@ -24,7 +24,7 @@ export const reservationSlice = createSlice({
         },
         removeReservation: (state, action:PayloadAction<string>)=>{
             const remainItems = state.reserveItems.filter( obj => {
-                return ((obj.id !== action.payload))
+                return ((obj._id !== action.payload))
                 
                
             })
