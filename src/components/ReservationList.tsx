@@ -36,7 +36,7 @@ function ReservationItem({reservationItem}: {reservationItem:ReservationItem}) {
     const [bookDate, setBookDate] = useState<Dayjs|null>(null)
     return (
         <div className="bg-rose-50 rounded-lg px-5 mx-5 py-5 my-5 text-emerald-600" >
-                    <div className="text-md">Restaurant Name: {reservationItem.name}</div>
+                    <div className="text-md">Restaurant Name: {reservationItem.restaurant.name}</div>
                     <div className="text-md">Reservation date: {reservationItem.reservationDate}</div>
                     <div className="w-fit space-y-2 py-4">
                         <div className="text-md text-center text-gray-600 ">Pick a date</div>

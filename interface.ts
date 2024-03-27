@@ -34,10 +34,11 @@
   }
 
   export interface ReservationItem {
-    name: string;
-    _id: string;
-    reservationDate: string;
-  }
+    "_id": string,
+    "reservationDate": string,
+    "user": string,
+    "restaurant": RestaurantItem
+}
   
   export interface ReservationJson {
     success: boolean,
